@@ -1,0 +1,8 @@
+<h1><%= @person.full_name %></h1>
+<p>Age: <%= @person.age%></p>
+<p>Gender: <%= @person.gender%></p>
+<p>Alive: <%= @person.alive%></p>
+<p>Relative: <%= @person.relative%></p>
+<%= link_to "Back", people_path %> 
+<%= link_to "Edit", edit_person_path(@person.id) %> 
+<%= link_to "Delete", person_path(@person.id), method: :delete %> 

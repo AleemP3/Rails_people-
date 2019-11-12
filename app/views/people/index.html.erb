@@ -1,0 +1,7 @@
+<h1>Peoples App</h1>
+<hr />
+<button><%= link_to "New Person", new_person_path %></button>
+
+<% @people.each do |person| %>
+    <%= link_to person.full_name, person_path(person.id) %>
+  <% end %>
