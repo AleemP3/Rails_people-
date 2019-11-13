@@ -3,6 +3,11 @@
 <p>Gender: <%= @person.gender%></p>
 <p>Alive: <%= @person.alive%></p>
 <p>Relative: <%= @person.relative%></p>
+<h1>TASKS</h1> 
+
 <%= link_to "Back", people_path %> 
 <%= link_to "Edit", edit_person_path(@person.id) %> 
 <%= link_to "Delete", person_path(@person.id), method: :delete %> 
+<button><%= link_to "Add Task", new_person_task_path(@person.id) %></button>
+<button><%= link_to "See Tasks", person_task_path(@person.id) %></button>
+<%= link_to "Delete", person_task_path(@person.id), method: :delete %> 

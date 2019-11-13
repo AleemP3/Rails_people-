@@ -8,12 +8,14 @@ class PeopleController < ApplicationController
   def show
     #html = specific blog 
     @person = Person.find(params[:id]) 
+    #@task = Task.find(1)
     #render :show
   end
 
   def new
     #html = form for new blog posts
     @person = Person.new
+   
     #render :new 
   end
 
